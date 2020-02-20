@@ -23,7 +23,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand d-flex p-3" href="{{ url('/') }}">
+                <a class="navbar-brand d-flex p-2" href="{{ url('/') }}">
                     <div><img src="/svg/logo.svg" alt="" style="height: 20px; border-right: 1px solid grey;" class="pr-3">  </div>
                     <div class="pl-3 pt-1"> estherGram </div>
                 </a>
