@@ -68,7 +68,7 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/profile/'.auth()->user()->id) }}">Home</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
@@ -83,7 +83,7 @@
                 <div class="title m-b-md">
                     estherGram
                 </div>
-
+<!--
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>
@@ -94,6 +94,7 @@
                     <a href="https://vapor.laravel.com">Vapor</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
+-->
             </div>
         </div>
     </body>
