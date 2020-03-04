@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-1"></div>
         <div class="col-3 p-5">
-            <img src="https://scontent-los2-1.cdninstagram.com/v/t51.2885-19/s150x150/83213956_3360255157381124_5752385570823208960_n.jpg?_nc_ht=scontent-los2-1.cdninstagram.com&_nc_ohc=qNYP8jXEMgoAX-yf-5c&oh=19cd5e5316c049151f4a0d4653819a21&oe=5ECEBCBA" class="rounded-circle">
+            <img src="/storage/{{$user->profile->image}}" class="rounded-circle w-100">
         </div>
 
         <div class="col-8 pt-5">
