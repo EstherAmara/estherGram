@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request,
     Intervention\Image\Facades\Image,
+    Illuminate\Support\Facades\Cache,
     App\User;
 
 class ProfilesController extends Controller
@@ -15,9 +16,16 @@ class ProfilesController extends Controller
         $user = User::findOrFail($user);
         $follows = (auth()->user()) ? auth()->user()->following->contains($user->id) : false;
 
+        $postCount = $user->posts->count();
+        $followersCount = $user->profile->followers->count();
+        $followingCount = $user->following->count();
+
         return view('profiles.index', [
             'user' => $user,
             'follows' => $follows,
+            'postCount' => $postCount,
+            'followersCount' => $followersCount,
+            'followingCount' => $followingCount,
         ]);
     }
 
