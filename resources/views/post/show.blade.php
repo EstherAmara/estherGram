@@ -34,7 +34,7 @@
 
                     <hr>
 
-                    <form action="/comment" method="POST">
+                    <form action="/comments/{{$post->id}}" method="POST">
 
                         @csrf
 

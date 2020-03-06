@@ -48,7 +48,10 @@ class PostsController extends Controller
 
     public function show(Post $post) {
         // dd($post);
-        $comments = Comments::all();
+        // $comments = Comments::where('post_id ='. $post->id);
+        $posts = Post::all()->pluck('id');
+        $comments = Comments::where('post_id', $post->id)->get();
+
         return view('post.show', compact('post', 'comments'));
     }
 }
