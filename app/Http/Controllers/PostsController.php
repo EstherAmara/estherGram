@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request,
     Intervention\Image\Facades\Image,
-    App\Post;
+    App\Post,
+    App\Comments;
 
 class PostsController extends Controller
 {
@@ -47,6 +48,7 @@ class PostsController extends Controller
 
     public function show(Post $post) {
         // dd($post);
-        return view('post.show', compact('post'));
+        $comments = Comments::all();
+        return view('post.show', compact('post', 'comments'));
     }
 }
