@@ -59,7 +59,7 @@
                                     <a href="/profile/{{auth()->user()->id}}" class="dropdown-item">
                                         Profile
                                     </a>
-                                    <a href="" class="dropdown-item">
+                                    <a href="/explore" class="dropdown-item">
                                         Explore People
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"

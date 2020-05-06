@@ -54,4 +54,9 @@ class PostsController extends Controller
 
         return view('post.show', compact('post', 'comments'));
     }
+
+    public function explore() {
+        $posts = Post::all();
+        return view('post.explore', compact('posts'));
+    }
 }
